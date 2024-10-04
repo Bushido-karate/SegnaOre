@@ -10,7 +10,7 @@ class Trainer extends Model
 {
 	use HasFactory;
 
-	protected $fillable = ['name', 'surname', 'role'];
+	protected $fillable = ['name', 'surname', 'role', 'payment'];
 
 	protected $casts = [
 		'role' => Role::class,

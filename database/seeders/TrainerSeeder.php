@@ -29,6 +29,7 @@ class TrainerSeeder extends Seeder
 			'name' => 'Teacher',
 			'surname' => 'Test',
 			'role' => Role::Teacher,
+			'payment' => 1200,
 		]);
 
 		// Crea un secondo utente
@@ -45,6 +46,7 @@ class TrainerSeeder extends Seeder
 			'name' => 'President',
 			'surname' => 'Test',
 			'role' => Role::President,
+			'payment' => 1200,
 		]);
 	}
 }
