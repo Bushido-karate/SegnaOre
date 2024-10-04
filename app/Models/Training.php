@@ -9,7 +9,7 @@ class Training extends Model
 {
 	use HasFactory;
 
-	protected $fillable = ['trainer_id', 'date', 'hours', 'minutes'];
+	protected $fillable = ['trainer_id', 'date', 'hours', 'minutes', 'payment'];
 
 	// Relazione 1-to-n con Trainer
 	public function trainer()
