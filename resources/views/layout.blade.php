@@ -19,7 +19,7 @@
 		<li><a href="{{route('logout')}}">Logout</a></li>
 
 		<li class="username">
-			<p>Logged in as <b>{{Auth::user()->name}}</b></p>
+			<p>Logged in as <b>{{Auth::user()->getTrainerName()}}</b></p>
 		</li>
 		@else
 		<li><a class="{{request()->routeIs('login') ? 'active' : ''}}" href="{{route('login')}}">Login</a></li>

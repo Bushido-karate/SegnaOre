@@ -49,4 +49,9 @@ class User extends Authenticatable
 	{
 		return $this->hasOne(Trainer::class);
 	}
+
+	public function getTrainerName()
+	{
+		return $this->trainer->name. ' '. $this->trainer->surname;
+	}
 }
