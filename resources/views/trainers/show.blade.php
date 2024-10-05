@@ -24,7 +24,9 @@
 		<p>{{$trainer->payment}}</p>
 	</div>
 
-
+	<div>
+		<a href="{{route('trainers.edit', [$trainer])}}">Edit</a>
+	</div>
 </div>
 
 @endsection

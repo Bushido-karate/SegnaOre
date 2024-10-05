@@ -6,8 +6,12 @@ use App\Models\Trainer;
 use App\Http\Requests\StoreTrainerRequest;
 use App\Http\Requests\UpdateTrainerRequest;
 
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+
 class TrainerController extends Controller
 {
+	use AuthorizesRequests;
+
     /**
      * Display a listing of the resource.
      */
@@ -45,7 +49,7 @@ class TrainerController extends Controller
      */
     public function edit(Trainer $trainer)
     {
-        //
+        return view("trainers.edit", ['trainer' => $trainer]);
     }
 
     /**
@@ -53,7 +57,14 @@ class TrainerController extends Controller
      */
     public function update(UpdateTrainerRequest $request, Trainer $trainer)
     {
-        //
+        // $this->authorize('update', $trainer);
+
+		$validated = $request->validated();
+		$trainer->update($validated);
+
+		return redirect()
+			->route('trainers.show', [$trainer])
+			->with('success', 'Profile correctly updated.');
     }
 
     /**

@@ -13,4 +13,4 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout')->middle
 
 Route::resource('trainers', TrainerController::class)->except([
 	'index',
-])->middleware('auth');
+]);
