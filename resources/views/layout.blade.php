@@ -14,6 +14,8 @@
 		<li><a class="{{request()->routeIs('home') ? 'active' : ''}}" href="{{route('home')}}">Home</a></li>
 
 		@auth
+		<li><a href="{{route('trainers.show', [Auth::user()->trainer])}}">Profile</a></li>
+
 		<li><a href="{{route('logout')}}">Logout</a></li>
 
 		<li class="username">

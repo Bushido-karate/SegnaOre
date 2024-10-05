@@ -37,7 +37,7 @@ class TrainerController extends Controller
      */
     public function show(Trainer $trainer)
     {
-        //
+        return view("trainers.show", ['trainer' => $trainer]);
     }
 
     /**
